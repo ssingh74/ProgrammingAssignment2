@@ -28,7 +28,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+
   invmatrix <- x$getinvmatrix()
   
   if(!is.null(invmatrix)) {
@@ -39,4 +39,5 @@ cacheSolve <- function(x, ...) {
   data <- x$getmatrix()
   invmatrix <- solve(data)
   x$setinvmatrix(invmatrix)
+  invmatrix
 }
